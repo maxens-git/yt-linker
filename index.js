@@ -8,7 +8,7 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
-app.post('/audio', (req, res) => {
+app.post('/api/audio', (req, res) => {
     const { url } = req.body;
     if (!url) {
         return res.status(400).json({ error: 'Missing URL' });
